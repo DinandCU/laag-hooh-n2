@@ -29,17 +29,22 @@
         </div>
         <div class="containerMiddel">
             <div class="loosingCommentsContainer">
-                <a id="loosingComments"></a>
+                <a id="loosingCommentsLeft"></a>
             </div>
-            <div>
+            <div class="currentNumberContainer">
 
             </div>
-            <div>
-
+            <div class="loosingCommentsContainer">
+                <a id="loosingCommentsRight"></a>
             </div>
         </div>
+        <button id="button"style="padding: 50px 50px"></button>
 
     
+    
+        <script src="script.js"></script>
+    </body>
+</html>
     
         <script src="script.js"></script>
     </body>
@@ -62,6 +67,33 @@
     width: 30%;
     padding-left: 0px;
 }
+.containerMiddel{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: lightcoral;
+    text-align: center;
+}
+.loosingCommentsContainerLeft {
+    width: 30%;
+}
+.currentNumberContainer {
+    width: 40%;
+}
+.loosingCommentsContainerRight{
+    width: 30%;
+}
 
 document.getElementById("winningComments").innerText = "Nice!!!";
-document.getElementById("loosingComments").innerText = "Oh Noo!";
+document.getElementById("button").onclick = leftOrRightLoosingComment;
+
+function leftOrRightLoosingComment() {
+    let randomNumber = math.random();
+    if (randomNumber < 0.5) {
+        return document.getElementById("loosingCommentsLeft").innerText = "Oh Noo!";
+    } else {
+        return document.getElementById("loosingCommentsRight").innerText = "Oh Noo!";
+    }
+}
+
