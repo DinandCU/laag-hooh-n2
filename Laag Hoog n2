@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hoger-Lager</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Juego Hoger-Lager</h1>
+            <p id="message">Haz tu primera tirada</p>
+      </div>
+        <div class="containerUp">
+            <div class="levensContainer">
+                <a>Levens: @ @ @</a>
+            </div>
+            <div class="winningCommentsContainer">
+                <a id="winningComments"></a>
+            </div>
+            <div class="playerPointsContainer">
+                <div class="playerContainer">
+                    <a>Player: <a id="naamPlayer"></a></a>
+                </div>
+                <div class="pointsContainer">
+                    <a>Points: <a id="pointsPlayer"></a></a>
+                </div>
+            </div>
+        </div>
+        <div class="containerMiddel">
+            <div class="loosingCommentsContainer">
+                <a id="loosingComments"></a>
+            </div>
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+
+    
+    
+        <script src="script.js"></script>
+    </body>
+</html>
+.containerUp {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: lightblue;
+    text-align: center;
+}
+.levensContainer {
+    width: 30%;
+}
+.winningCommentsContainer{
+    width: 40%;
+}
+.playerPointsContainer{
+    width: 30%;
+    padding-left: 0px;
+}
+
+document.getElementById("winningComments").innerText = "Nice!!!";
+document.getElementById("loosingComments").innerText = "Oh Noo!";
